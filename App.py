@@ -1321,3 +1321,13 @@ with tab4:
         yaxis_title='Hours'
     )
     st.plotly_chart(fig, use_container_width=True)
+
+# This is a sample sequence generator that might have been causing the error
+# If you need to create a sequence of numbers and their squares and cubes, use this:
+def generate_number_sequence(n):
+    seq = pd.DataFrame({"n": np.arange(1, n+1), "n^2": np.arange(1, n+1)**2, "n^3": np.arange(1, n+1)**3})
+    return seq
+
+# Example usage (uncomment if needed):
+# number_sequence = generate_number_sequence(10)
+# st.write(number_sequence)
