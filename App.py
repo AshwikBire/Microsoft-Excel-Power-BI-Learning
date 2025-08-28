@@ -426,7 +426,6 @@ learning_content = {
         'prerequisites': ['excel_basics'],
         'badge': 'Excel Formulas Expert'
     },
-    # Additional modules would be defined here with similar detailed structure...
     'data_analysis': {
         'title': 'Data Analysis Techniques',
         'description': 'Advanced analytical methods for deriving insights from data in Excel and Power BI.',
@@ -865,7 +864,7 @@ with tab1:
         
         skill_level = st.selectbox(
             "Your current skill level:",
-            ["Beginner", "Intermediate", "Advanced"],
+            ["Beginner", 'Intermediate', 'Advanced'],
             index=["Beginner", "Intermediate", "Advanced"].index(st.session_state.user_skill_level)
         )
         
@@ -1063,7 +1062,7 @@ with tab3:
         <div class="card">
             <h3>📝 Excel Exercises</h3>
         </div>
-        """, unsafe_allow_html=True)
+        ""', unsafe_allow_html=True)
         
         # Display Excel exercises
         for module, exercises in practice_exercises.items():
